@@ -1,7 +1,7 @@
-Name=Sanaya
+Name="Sanaya"
 Age=8
 Date=3
-Month=February
+Month="February"
 Year=2017
-Print(Name,Age,Date,Month,Year\n)
-Print("Happy Birthday")
+print(Name,Age,Date,Month,Year)
+print("Happy Birthday")
