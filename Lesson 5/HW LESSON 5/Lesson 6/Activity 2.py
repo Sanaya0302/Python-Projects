@@ -10,3 +10,5 @@ if a>0 or b>0:
 else:
     print("Both of the values are less then 0")
 print(a !=b)
+print(not a)
+print(not c)
