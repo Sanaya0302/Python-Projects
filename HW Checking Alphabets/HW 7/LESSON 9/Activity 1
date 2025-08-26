@@ -1,0 +1,22 @@
+print("Choose your ride")
+print("1.Bike")
+print("2.Car")
+choice=int(input("Choice: "))
+if choice==1:
+    print("1.scooter")
+    print("2.scooty")
+    choice1=int(input("Choice: "))
+    if choice1==1:
+        print("You have chose scooter")
+    else:
+        print("You chose scooty")
+elif choice==2:
+    print("1.SUV")
+    print("2.sudan")
+    choice2=int(input("Choice: "))
+    if choice2==1:
+        print("You have chose SUV")
+    else:
+        print("You have chose sudan")
+else:
+    print("Invalid choice!")
