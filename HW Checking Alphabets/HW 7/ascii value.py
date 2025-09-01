@@ -1,1 +1,2 @@
-char=input("Enter")
+char=input("Enter a letter")
+if 
