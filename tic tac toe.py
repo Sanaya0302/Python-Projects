@@ -66,15 +66,16 @@ def game():
         if count==9:
             print("Game over!!!!!!!!!!!!!!")
             print("Its a tie!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            break
         if turn=="X":
             turn="O"
         else:
             turn="X"
-        playagain=input("do you want to play again?(y/n)")
-        if playagain=="y" or playagain=="Y":
-            for key in board_keys:
-                the_board[key]=' '
-        else:
+    playagain=input("do you want to play again?(y/n)")
+    if playagain=="y" or playagain=="Y":
+        for key in board_keys:
+            the_board[key]=' '
+    else:
             print("bye bye!!!!!!!!!!!!!!!!!!!")
 game()
 if __name__=="__main__":
