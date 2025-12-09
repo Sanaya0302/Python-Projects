@@ -10,4 +10,4 @@ class Bus(vehicle):
         base=super().fare()
         return base+base*0.10
     school_bus=Bus(50)
-    print("Final fare:",school_bus.fare)
+    print("Final fare:",school_bus.fare())
