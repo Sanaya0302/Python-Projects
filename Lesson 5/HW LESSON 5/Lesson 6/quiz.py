@@ -12,7 +12,7 @@ class quiz():
             else:
                 print("wrong answer!!!!!!")
             option=int(input("Enter 1 if you want to play again else type 0: "))
-            if 0:
+            if option==0:
                 break
-q=quiz
+q=quiz()
 q.quizzz()
