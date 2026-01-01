@@ -24,8 +24,8 @@ def main():
         if pressed[pygame.K_RIGHT]: x+=3
         if pressed[pygame.K_UP]: y-=3
         if pressed[pygame.K_DOWN]: y+=3
-        x=min(max(0,x),w-x)
-        y=min(max(0,y),h-y)
+        x=min(max(0,x),width-w)
+        y=min(max(0,y),height-h)
         if x==0:
             current=colours['blue']
         elif x==width-w:
