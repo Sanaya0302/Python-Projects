@@ -27,3 +27,29 @@ class Sprite(pygame.sprite.Sprite):
         if self.rect.top<=0 or self.rect.bottom>=400:
             self.velocity[1]=-self.velocity[1]
             boundary_hit=True
+        if boundary_hit:
+            pygame.event.post(pygame.event.Event(s_colorchange))
+            pygame.event.post(pygame.event.Event(bg_colorchange))
+    def color_change(self):
+        self.image.fill(random.choice([pink,lavender,yellow,white]))        
+    def bg_change(self):
+        global bg_colorchanging
+        bg_colorchanging=random.choice([cyan,lightblue,darkblue])        
+all_sprite=pygame.sprite.Group()
+Sprite1=Sprite(white,20,30)
+Sprite1.rect.x=random.randint(0,480)
+Sprite1.rect.y=random.randint(0,370)
+all_sprite.add(Sprite1)
+clock=pygame.time.Clock()
+running=True
+while running:
+    for event in pygame.event.get():
+        if event.type==pygame.QUIT:
+            running=False
+        elif event.type==s_colorchange:
+            Sprite1.color_change()
+        elif event.type==bg_colorchange:
+            Sprite1.bg_change()
+    all_sprite.update()
+    Screen.fill(bg_colorchanging)
+

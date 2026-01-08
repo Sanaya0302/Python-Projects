@@ -9,5 +9,5 @@ def main():
     current=color['yellow']
     screen.fill((0,0,0))
     rect=250,250
-    pygame.draw.rect(screen,current(rect))
+    pygame.draw.rect(screen,current(rect,30,30))
 main()
