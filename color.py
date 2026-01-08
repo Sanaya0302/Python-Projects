@@ -40,6 +40,10 @@ Sprite1=Sprite(white,20,30)
 Sprite1.rect.x=random.randint(0,480)
 Sprite1.rect.y=random.randint(0,370)
 all_sprite.add(Sprite1)
+Screen=pygame.display.set_mode((500,400))
+pygame.display.set_caption("Color changing sprite!!!!!!")
+bg_colorchanging=cyan
+Screen.fill(bg_colorchanging)
 clock=pygame.time.Clock()
 running=True
 while running:
@@ -52,4 +56,11 @@ while running:
             Sprite1.bg_change()
     all_sprite.update()
     Screen.fill(bg_colorchanging)
+    all_sprite.draw(Screen)
+    pygame.display.flip()
+    clock.tick(90)
+pygame.quit()
+
+
+
 

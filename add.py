@@ -13,9 +13,9 @@ class Sprite(pygame.sprite.Sprite):
         if k[pygame.K_RIGHT]:
             self.rect.x+=5 
         if k[pygame.K_UP]:
-            self.rect.x-=5 
+            self.rect.y-=5 
         if k[pygame.K_DOWN]:
-            self.rect.x+=5
+            self.rect.y+=5
 screen=pygame.display.set_mode((500,400))
 clock=pygame.time.Clock()
 Sp1=Sprite(pygame.Color("cyan"),100,100) 
