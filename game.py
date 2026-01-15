@@ -14,8 +14,8 @@ class Player(pygame.sprite.Sprite):
         pygame.draw.rect(self.image,color,(0,0,width,height))
         self.rect=self.image.get_rect()
     def move(self,x_change,y_change):
-        self.rect.x=max(min(0,self.rect.x+x_change),screen_width - self.rect.width)
-        self.rect.y=max(min(0,self.rect.y+y_change),screen_height - self.rect.height)
+        self.rect.x=max(0,min(self.rect.x+x_change,screen_width - self.rect.width))
+        self.rect.y=max(0,min(self.rect.y+y_change,screen_height - self.rect.height))
 screen=pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption("Move the rectangle using arrow keys")
 group=pygame.sprite.Group()
